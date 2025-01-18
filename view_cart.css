@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Kannada:wght@100..900&family=Poppins:wght@300;400;500;700;800&display=swap');
+:root{
+    --main-color: #000080;
+    --second-color: #C11C43;
+    --light-red: #C11C4359;
+    --light-pink: #FFC2D0;
+    --text-color: #000;
+    --white-color: #fff;
+    --body-color: #f6f6ff;
+}
+
+*{
+    font-family: "Jost", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-color);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px 15px;
+    font-size: 24px;
+    background-color: #fff;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.bill-card{
+    width: 30%;
+    height: 300px;
+    border: 1px solid #000080;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.cart-summary span{
+    font-size: 1.2rem;
+    color: var(--second-color);
+    font-weight: 600;
+}
+
+.shopping-section{
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-container {
+    width: 65%;
+}
+
+.cart-item {
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 15px;
+}
+
+.remove-btn{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+}
+.remove-btn:hover{
+    background-color: var(--second-color);
+    color: var(--white-color);
+    border: none;
+}
+
+.product-details {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+}
+
+.cost{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.cost-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-top: -30px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.product-price {
+    color: var(--second-color);
+    font-size: 1rem;
+    margin-top: -15px;
+}
+
+.product-discount {
+    font-size: 14px;
+    color: #008a00;
+}
+
+.quantity-input{
+    width: 50px;
+    padding: 7px;
+    border: none;
+    background-color: var(--body-color);
+    border: 1px solid var(--main-color);
+    padding: 7 10px;
+}
+
+.quantity-btn{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: 1px solid var(--main-color);
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.quantity-btn:hover {
+    background-color: transparent;
+    color: var(--main-colorr);
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.check-out-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check-out-btn{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: 1px solid var(--main-color);
+    padding: 10px 30px;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+
+.check-out-btn:hover{
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+@media (max-width: 1024px) {
+    .shopping-section{
+        width: 90%;
+    }
+    .product-name{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bill-card{
+        width: 45%;
+    } 
+
+    .product-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-quantity {
+        margin-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 430px){
+    .shopping-section {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .product-image{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .cart-container {
+        width: 100%;
+    }
+
+    .bill-card {
+        width: 100%;
+    }
+}

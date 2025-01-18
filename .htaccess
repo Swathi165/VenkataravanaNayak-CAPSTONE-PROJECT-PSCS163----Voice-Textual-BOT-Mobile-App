@@ -1,0 +1,24 @@
+RewriteEngine On
+
+# Map pretty URLs to their respective PHP files
+RewriteRule ^home$ index.php [L]
+RewriteRule ^about$ about.php [L,QSA]
+RewriteRule ^orders$ orders.php [L,QSA]
+RewriteRule ^shop$ shop.php [L,QSA]
+RewriteRule ^contact$ contact.php [L,QSA]
+RewriteRule ^empty_cart$ empty_cart.php [L,QSA]
+RewriteRule ^search$ search.php [L,QSA]
+RewriteRule ^no_orders$ no_orders.php [L,QSA]
+RewriteRule ^products$ products.php [L,QSA]
+RewriteRule ^terms_page$ terms_page.php [L,QSA]
+RewriteRule ^privacy_policy$ privacy_policy.php [L,QSA]
+RewriteRule ^all$ all.php [L,QSA]
+RewriteRule ^cosmetics$ products?category_id=6 [L,QSA]
+RewriteRule ^shoes$ products?category_id=1 [L,QSA]
+RewriteRule ^womens_wear$ products?category_id=4 [L,QSA]
+RewriteRule ^mens_wear$ products?category_id=2 [L,QSA]
+
+# Redirect all other requests to index.php if the requested file or directory does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Order Search</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <button id="closeChatbot"><i class='bx bxs-tag-x' ></i></button>
+            <h2>APPAREL</h2>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="btn-container">
+            <div class="chatbot-input">
+                <button id="voice-btn"><i class='bx bx-microphone'></i></button>
+                <input type="text" id="chat-input" placeholder="Type your message..." />
+                <button id="send-btn"><i class='bx bxs-send' ></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="action-buttons">
+        <button id="stop-speaking-btn">Stop Speaking</button>
+        <button id="change-voice-btn">Change Voice</button>
+        <button id="clear-chat-btn">Clear Chat</button>
+    </div>
+    <script src="chatbot/chatbot.js"></script>
+</body>
+</html>
