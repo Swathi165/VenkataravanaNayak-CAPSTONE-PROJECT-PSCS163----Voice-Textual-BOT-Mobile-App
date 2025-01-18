@@ -1,0 +1,286 @@
+:root{
+    --main-color: #000080;
+    --second-color: #C11C43;
+    --light-red: #C11C4359;
+    --light-pink: #FFC2D0;
+    --text-color: #000;
+    --white-color: #fff;
+    --body-color: #f6f8ff;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Jost", sans-serif;
+    background: var(--body-color);
+}
+.about-banner{
+    width: 100%;
+    height: 362px;
+    margin-top: 10px;
+}
+
+.about-banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.about-banner .heading{
+    position: absolute;
+    top: 0px;
+    left: 60%;
+    color: var(--black-color);
+    padding-right: 100px;
+}
+
+.about-banner .heading h1{
+    font-size: 4rem;
+}
+
+.about-banner .heading h2{
+    margin-top: -45px;
+}
+
+.about-container{
+    background-color: #e4eaff;
+    padding: 100px 20px;
+}
+
+.about-flex{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.about-left{
+    width: 60%;
+}
+
+.about-banner, .about-left, .about-right {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-left h2{
+    font-size: 2rem;
+}
+
+.about-left .text{
+    margin-top: -20px;
+}
+
+.title{
+    width: 100px;
+    border: 2px solid var(--main-color);
+    text-align: center;
+    color: var(--main-color);
+    padding: 5px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.about-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.about-card{
+    background-color: var(--body-color);
+    text-align: center;
+    padding: 10px;
+    line-height: 10px;
+}
+
+.about-card h3{
+    font-size: 2rem;
+}
+
+.about-card p{
+    font-weight: 600;
+}
+
+.about-right{
+    width: 40%;
+}
+
+.about-right .img{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.about-right .img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.clinet-div{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.left-div{
+    width: 40%;
+}
+
+.left-div img{
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial-carousel {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+  
+.testimonial-carousel h2{
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 5px;
+    width: 180px;
+    text-align: center;
+    margin: 0 auto;
+}
+  
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+  
+.testimonial-item {
+    min-width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+.testimonial-item p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+  
+.testimonial-item h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+  
+.testimonial-item span {
+    font-size: 1.2em;
+    color: gray;
+}
+  
+.testimonial-carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+  
+.testimonial-carousel button:hover{
+    background-color: var(--main-color);
+}
+
+.prev {
+    left: 0;
+}
+  
+.next {
+    right: 0;
+}  
+
+@media (max-width: 1024px) {
+    .about-banner{
+        width: 100%;
+        height: 280px;
+    }
+    .about-banner .heading {
+        top: -50px;
+        left: 65%;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-banner{
+        width: 100%;
+        height: 200px;
+    }
+    .about-banner .heading h1 {
+        font-size: 2.5rem;
+    }
+    .about-banner .heading {
+        
+        left: 65%;
+        padding-right: 30px;
+    }
+    .about-banner .heading h2 {
+        margin-top: -35px;
+        font-size: 1rem;
+    }
+    .about-banner .heading p{
+        font-size: 0.8rem;
+    }
+    .about-flex{
+        flex-direction: column-reverse;
+    }
+    .about-right{
+        width: 100%;
+    }
+    .about-left{
+        width: 100%;
+    }
+    .about-left h2 {
+        font-size: 1.2rem;
+    }
+    .about-left .text {
+        margin-top: -10px;
+    }
+    .about-card{
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 430px) {
+    .about-banner{
+        height: 100px;
+    }
+    .about-banner .heading p{
+        display: none;
+    }
+    .about-banner .heading{
+        top: -30px;
+        padding: 0;
+    }
+    .left-div{
+        display: none;
+    }
+    .testimonial-carousel{
+        width: 100%;
+    }
+}
